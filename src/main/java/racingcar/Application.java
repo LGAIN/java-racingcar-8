@@ -6,6 +6,7 @@ public class Application {
 		try {
 			View view = new View();
 			InputParser inputParser = new InputParser();
+			Race race = new Race();
 
 			// 자동차 이름 입력 및 검증
 			view.printStart();
@@ -20,7 +21,8 @@ public class Application {
 
 			// 결과 출력
 			view.printResult();
-			
+			race.startGame(inputs, inputCount);
+
 		} catch (IllegalArgumentException e) {
 			System.out.println(e.getMessage());
 
